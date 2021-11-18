@@ -17,8 +17,6 @@ function flash(){
     return tl;
 }
 
-
-
 mainTL.add(flash());
 // .add(stepTwo(), "-=0.15");
 
