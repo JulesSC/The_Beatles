@@ -14,11 +14,11 @@ function flash(){
     .to("#logo", {duration: 0.05, alpha: 0, ease: "none"})
     .to("#preloader", {duration: 0.05, backgroundColor: "rgba(255, 255, 255, 1)", ease: "none"})
     .to("#preloader", {duration: 0.05, backgroundColor: "rgba(0, 0, 0, 1)", ease: "none"});
+    // .to("#logo", {onComplete:reset});
     return tl;
 }
 
 function mask(){
-
     const tl = gsap.timeline();
     tl.to("#logo", {duration:0.0001, fill: "rgba(0, 0, 0, 1)", alpha: 1})
     .to("#preloader", {duration: 0.05, backgroundColor: "rgba(255, 255, 255, 1)", ease: "none"})
