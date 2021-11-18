@@ -428,3 +428,40 @@ textarea {
 /* =============
     Footer
 ============= */
+/* =============
+    Preloader
+============= */
+#preloader {
+  display: grid;
+  grid-template-columns: auto 90vw auto;
+  grid-template-areas: ". preloader .";
+  background-color: transparent;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  #preloader {
+    grid-template-columns: auto 80vw auto;
+  }
+}
+@media (min-width: 992px) {
+  #preloader {
+    grid-template-columns: auto 70vw auto;
+  }
+}
+@media (min-width: 1200px) {
+  #preloader {
+    grid-template-columns: auto 50vw auto;
+  }
+}
+#preloader > div {
+  grid-area: preloader;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#preloader > div svg {
+  width: 80%;
+}
