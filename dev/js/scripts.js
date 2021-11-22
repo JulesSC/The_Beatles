@@ -59,14 +59,13 @@ function middle(){
     const tl = gsap.timeline();
     tl.to("#logo", {duration:0.0001, alpha: 1}, "two")
     .to("#TH, #THE_2, #BEA, #BEAT, #BEATL", {duration:0.0001, alpha: 0}, "two")
-    
+
     // trying to bring letters into the clip path from above and below
     .from("#T", {duration: 0.5, y:"+=3000", ease: "power3.out"}, "one")
     .from("#B", {duration: 0.5, y:"-=500", ease: "power3.out"}, "one")
     .from("#BE", {duration: 0.5, y:"+=300", ease: "power3.out"}, "one")
     .from("#BEATLE", {duration: 0.5, y:"-=500", ease: "power3.out"}, "one")
     .from("#BEATLES_2", {duration: 0.5, y:"+=300", ease: "power3.out"}, "one")
-    // .from("#logo", {duration:0.0001, alpha: 0});
     return tl;
 }
 
