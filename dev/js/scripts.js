@@ -47,10 +47,11 @@ function split(){
     .to("#BE-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
     .to("#BEATLE-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "one")
     .to("#BEATLES_2-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
-    .to("#TH-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "two")
+    // two start times
+    .to("#TH-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "two")
     .to("#THE_2-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "two")
     .to("#BEA-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "two")
-    .to("#BEAT-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "two")
+    .to("#BEAT-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "two")
     .to("#BEATL-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "two")
     return tl;
 }
