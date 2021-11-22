@@ -43,33 +43,29 @@ function split(){
     tl.to("#logo", {duration:0.0001, alpha: 0}, "one")
     .to("#logo-1", {duration:0.0001, fill: "rgba(0, 0, 0, 1)", alpha: 1}, "one")
     .to("#T-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
-    // .to("#TH-1", {duration: 0.5, y:"+=200", ease: "power3.out"}, "one")
-    // .to("#THE_2-1", {duration: 0.5, y:"-=100", ease: "power3.out"}, "one")
     .to("#B-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "one")
     .to("#BE-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
-    // .to("#BEA-1", {duration: 0.5, y:"-=500", ease: "power3.out"}, "one")
-    // .to("#BEAT-1", {duration: 0.5, y:"-=400", ease: "power3.out"}, "one")
-    // .to("#BEATL-1", {duration: 0.5, y:"+=400", ease: "power3.out"}, "one")
     .to("#BEATLE-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "one")
     .to("#BEATLES_2-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
-    // .from("#logo", {duration:0.0001, alpha: 0});
+    .to("#TH-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "two")
+    .to("#THE_2-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "two")
+    .to("#BEA-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "two")
+    .to("#BEAT-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "two")
+    .to("#BEATL-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "two")
     return tl;
 }
 
 function middle(){
     const tl = gsap.timeline();
-    tl.to("#logo", {duration:0.0001, alpha: 0}, "one")
-    .to("#logo-1", {duration:0.0001, fill: "rgba(0, 0, 0, 1)", alpha: 1}, "one")
-    // .to("#T-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
-    .to("#TH-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "one")
-    .to("#THE_2-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
-    // .to("#B-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "one")
-    // .to("#BE-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
-    .to("#BEA-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
-    .to("#BEAT-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
-    .to("#BEATL-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "one")
-    // .to("#BEATLE-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "one")
-    // .to("#BEATLES_2-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
+    tl.to("#logo", {duration:0.0001, alpha: 1}, "two")
+    .to("#TH, #THE_2, #BEA, #BEAT, #BEATL", {duration:0.0001, alpha: 0}, "two")
+    
+    // trying to bring letters into the clip path from above and below
+    .from("#T", {duration: 0.5, y:"+=3000", ease: "power3.out"}, "one")
+    .from("#B", {duration: 0.5, y:"-=500", ease: "power3.out"}, "one")
+    .from("#BE", {duration: 0.5, y:"+=300", ease: "power3.out"}, "one")
+    .from("#BEATLE", {duration: 0.5, y:"-=500", ease: "power3.out"}, "one")
+    .from("#BEATLES_2", {duration: 0.5, y:"+=300", ease: "power3.out"}, "one")
     // .from("#logo", {duration:0.0001, alpha: 0});
     return tl;
 }
@@ -77,6 +73,6 @@ function middle(){
 mainTL.add(flash())
 .add(mask())
 .add(split())
-.add(middle(), "-=75%");
+.add(middle(), "-=50%");
 
 GSDevTools.create();
