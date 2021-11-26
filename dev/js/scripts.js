@@ -134,7 +134,6 @@ function morph(){
     // .to("#TH-1", {duration: 2, ease: "power3.out", morphSVG:"#TH-4"}, "fifteen")
     // .to("#THE_2-1", {duration: 2, ease: "power3.out", morphSVG:"#THE-4"}, "fifteen")
     // .to("#BEAT-1", {duration: 2, ease: "power3.out", morphSVG:"#T-4"}, "BEAT-4");
-
     return tl;
 }
 
