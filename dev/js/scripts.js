@@ -7,14 +7,15 @@ MorphSVGPlugin.convertToPath("circle, rect, ellipse, line, polygon, polyline");
 
 const mainTL = gsap.timeline();
 
-function flash(){
+function flash1(){
     const tl = gsap.timeline();
-    tl.to("#background", {duration: 0.05, fill: "rgba(0, 0, 0, 1)", ease: "none", delay: .1}, "one")
-    .to("#preloader", {duration: 0.05, backgroundColor: "rgba(0, 0, 0, 1)", ease: "none", delay: .1}, "one")
+    tl.to("#logo-2, #logo-3", {duration:0.0001, alpha: 0})
+    .to("#background", {duration: 0.05, fill: "rgba(0, 0, 0, 1)", ease: "none", delay: .05}, "one")
+    .to("#preloader", {duration: 0.05, backgroundColor: "rgba(0, 0, 0, 1)", ease: "none", delay: .05}, "one")
     .to("#logo-1", {duration: 0.05, fill: "rgba(255, 255, 255, 1)", delay: .1, ease: "none"}, "one")
-    .to("#logo-1", {duration: 0.05, alpha: 0, ease: "none"})
-    .to("#background", {duration: 0.05, fill: "rgba(255, 255, 255, 1)", ease: "none"}, "two")
-    .to("#preloader", {duration: 0.05, backgroundColor: "rgba(255, 255, 255, 1)", ease: "none"}, "two")
+    .to("#logo-1", {duration: 0.0001, alpha: 0, ease: "none"})
+    .to("#background", {duration: 0.05, fill: "rgba(255, 255, 255, 1)", ease: "none", delay: .05}, "two")
+    .to("#preloader", {duration: 0.05, backgroundColor: "rgba(255, 255, 255, 1)", ease: "none", delay: .05}, "two")
     .to("#background", {duration: 0.05, fill: "rgba(0, 0, 0, 1)", ease: "none"}, "three")
     .to("#preloader", {duration: 0.05, backgroundColor: "rgba(0, 0, 0, 1)", ease: "none"}, "three")
     return tl;
@@ -23,56 +24,103 @@ function flash(){
 function mask(){
     const tl = gsap.timeline();
     tl.to("#logo", {duration:0.0001, fill: "rgba(0, 0, 0, 1)", alpha: 1})
-    .to("#background", {duration: 0.05, fill: "rgba(255, 255, 255, 1)", ease: "none"}, "one")
-    .to("#preloader", {duration: 0.05, backgroundColor: "rgba(255, 255, 255, 1)", ease: "none"}, "one")
-    .from("#T", {duration: 0.5, y:"+=200", ease: "power3.out"}, "one")
-    .from("#TH", {duration: 0.5, y:"-=200", ease: "power3.out"}, "one")
-    .from("#THE_2", {duration: 0.5, y:"+=100", ease: "power3.out"}, "one")
-    .from("#B", {duration: 0.5, y:"-=500", ease: "power3.out"}, "one")
-    .from("#BE", {duration: 0.5, y:"+=300", ease: "power3.out"}, "one")
-    .from("#BEA", {duration: 0.5, y:"+=500", ease: "power3.out"}, "one")
-    .from("#BEAT", {duration: 0.5, y:"+=400", ease: "power3.out"}, "one")
-    .from("#BEATL", {duration: 0.5, y:"-=400", ease: "power3.out"}, "one")
-    .from("#BEATLE", {duration: 0.5, y:"-=500", ease: "power3.out"}, "one")
-    .from("#BEATLES_2", {duration: 0.5, y:"+=300", ease: "power3.out"}, "one")
+    .to("#background", {duration: 0.05, fill: "rgba(255, 255, 255, 1)", ease: "none"}, "four")
+    .to("#preloader", {duration: 0.05, backgroundColor: "rgba(255, 255, 255, 1)", ease: "none"}, "four")
+    .from("#T", {duration: 0.5, y:"+=200", ease: "power3.out"}, "four")
+    .from("#TH", {duration: 0.5, y:"-=200", ease: "power3.out"}, "four")
+    .from("#THE_2", {duration: 0.5, y:"+=100", ease: "power3.out"}, "four")
+    .from("#B", {duration: 0.5, y:"-=500", ease: "power3.out"}, "four")
+    .from("#BE", {duration: 0.5, y:"+=300", ease: "power3.out"}, "four")
+    .from("#BEA", {duration: 0.5, y:"+=500", ease: "power3.out"}, "four")
+    .from("#BEAT", {duration: 0.5, y:"+=400", ease: "power3.out"}, "four")
+    .from("#BEATL", {duration: 0.5, y:"-=400", ease: "power3.out"}, "four")
+    .from("#BEATLE", {duration: 0.5, y:"-=500", ease: "power3.out"}, "four")
+    .from("#BEATLES_2", {duration: 0.5, y:"+=300", ease: "power3.out"}, "four")
     return tl;
 }
 
 function split(){
     const tl = gsap.timeline();
-    tl.to("#logo", {duration:0.0001, alpha: 0}, "one")
-    .to("#logo-1", {duration:0.0001, fill: "rgba(0, 0, 0, 1)", alpha: 1}, "one")
-    .to("#T-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
-    .to("#B-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "one")
-    .to("#BE-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
-    .to("#BEATLE-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "one")
-    .to("#BEATLES_2-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "one")
+    tl.to("#logo", {duration:0.0001, alpha: 0}, "five")
+    .to("#logo-1", {duration:0.0001, fill: "rgba(0, 0, 0, 1)", alpha: 1}, "five")
+    .to("#T-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "five")
+    .to("#B-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "five")
+    .to("#BE-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "five")
+    .to("#BEATLE-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "five")
+    .to("#BEATLES_2-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "five")
     // two start times
-    .to("#TH-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "two")
-    .to("#THE_2-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "two")
-    .to("#BEA-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "two")
-    .to("#BEAT-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "two")
-    .to("#BEATL-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "two")
+    .to("#TH-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "six")
+    .to("#THE_2-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "six")
+    .to("#BEA-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "six")
+    .to("#BEAT-1", {duration: 0.5, y:"+=450", ease: "power3.out"}, "six")
+    .to("#BEATL-1", {duration: 0.5, y:"-=450", ease: "power3.out"}, "six")
     return tl;
 }
 
-function middle(){
+function middle1(){
     const tl = gsap.timeline();
-    tl.to("#logo", {duration:0.0001, alpha: 1}, "two")
-    .to("#TH, #THE_2, #BEA, #BEAT, #BEATL", {duration:0.0001, alpha: 0}, "demo-2")
+    tl.to("#logo", {duration:0.0001, alpha: 1}, "nine")
+    .to("#TH, #THE_2, #BEA, #BEAT, #BEATL", {duration:0.0001, alpha: 0}, "nine")
+    // .to("#T, #B, #BE, #BEATLE, #BEATLES_2", {duration:0.0001, y:"-=550"}, "nine")
 
     // trying to bring letters into the clip path from above and below
-    .from("#T", {duration: 0.5, y:"+=300", ease: "power3.out"}, "demo")
-    // .from("#B", {duration: 0.5, y:"-=500", ease: "power3.out"}, "one")
-    // .from("#BE", {duration: 0.5, y:"+=300", ease: "power3.out"}, "one")
-    // .from("#BEATLE", {duration: 0.5, y:"-=500", ease: "power3.out"}, "one")
-    // .from("#BEATLES_2", {duration: 0.5, y:"+=300", ease: "power3.out"}, "one")
+    // .from("#T", {duration: 0.5, y:"+=300", ease: "power3.out"}, "eight")
+    // .from("#B", {duration: 0.5, y:"-=500", ease: "power3.out"}, "eight")
+    // .from("#BE", {duration: 0.5, y:"+=300", ease: "power3.out"}, "eight")
+    // .from("#BEATLE", {duration: 0.5, y:"-=500", ease: "power3.out"}, "eight")
+    // .from("#BEATLES_2", {duration: 0.5, y:"+=300", ease: "power3.out"}, "eight")
     return tl;
 }
 
-mainTL.add(flash())
+function others(){
+    const tl = gsap.timeline();
+    tl.to("#logo-2, #logo-3", {duration:0.0001, alpha: 1, y:"-=450", x:"-=350"})
+    // lower
+    .from("#T-2", {duration: 0.5, y:"+=200", ease: "power3.out"}, "seven")
+    .from("#TH-2", {duration: 0.5, y:"-=200", ease: "power3.out"}, "seven")
+    .from("#THE-2", {duration: 0.5, y:"+=100", ease: "power3.out"}, "seven")
+    .from("#BE-2", {duration: 0.5, y:"+=300", ease: "power3.out"}, "seven")
+    .from("#BEATL-2", {duration: 0.5, y:"-=400", ease: "power3.out"}, "seven")
+    .from("#BEATLE-2", {duration: 0.5, y:"-=500", ease: "power3.out"}, "seven")
+    .from("#BEATLES-2", {duration: 0.5, y:"+=300", ease: "power3.out"}, "seven")
+    // upper
+    .from("#B-3", {duration: 0.5, y:"+=200", ease: "power3.out"}, "seven")
+    .from("#BEA-3", {duration: 0.5, y:"-=200", ease: "power3.out"}, "seven")
+    .from("#BEAT-3", {duration: 0.5, y:"+=100", ease: "power3.out"}, "seven")
+    return tl;
+}
+
+function middle2(){
+    const tl = gsap.timeline();
+    tl.to("#TH, #THE_2, #BEA, #BEAT, #BEATL", {duration:0.0001, alpha: 1})
+
+    // trying to bring letters into the clip path from above and below
+    // .from("#TH", {duration: 0.5, y:"+=300", ease: "power3.out"}, "ten")
+    // .from("#THE_2", {duration: 0.5, y:"-=500", ease: "power3.out"}, "ten")
+    // .from("#BEA", {duration: 0.5, y:"+=300", ease: "power3.out"}, "ten")
+    // .from("#BEAT", {duration: 0.5, y:"-=500", ease: "power3.out"}, "ten")
+    // .from("#BEATL", {duration: 0.5, y:"+=300", ease: "power3.out"}, "ten")
+    return tl;
+}
+
+function flash2(){
+    const tl = gsap.timeline();
+    tl.to("#background", {duration: 0.05, fill: "rgba(0, 0, 0, 1)", ease: "none", delay: .1}, "eleven")
+    .to("#preloader", {duration: 0.05, backgroundColor: "rgba(0, 0, 0, 1)", ease: "none", delay: .1}, "eleven")
+    .to("#logo-1, #LowerT-Inside, #UpperB-Inside, #logo", {duration: 0.05, fill: "rgba(255, 255, 255, 1)", delay: .1, ease: "none"}, "eleven")
+    .to("#background", {duration: 0.05, fill: "rgba(255, 255, 255, 1)", ease: "none"}, "twelve")
+    .to("#preloader", {duration: 0.05, backgroundColor: "rgba(255, 255, 255, 1)", ease: "none"}, "twelve")
+    .to("#logo-1, #LowerT-Inside, #UpperB-Inside, #logo", {duration: 0.05, fill: "rgba(0, 0, 0, 1)", delay: .1, ease: "none"}, "twelve")
+    .to("#logo-1, #LowerT-Inside, #UpperB-Inside", {duration: 0.0001, alpha: 0, ease: "none"})
+    return tl;
+}
+
+mainTL.add(flash1())
 .add(mask())
 .add(split())
-.add(middle());
+.add(middle1())
+.add(others())
+.add(middle2())
+.add(flash2());
 
 GSDevTools.create();
