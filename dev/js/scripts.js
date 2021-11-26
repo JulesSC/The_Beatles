@@ -115,12 +115,36 @@ function flash2(){
     return tl;
 }
 
+// need to switch logo to logo-1
+function morph(){
+    const tl = gsap.timeline();
+    tl.to("#T-1", {duration: 0.0001, y:"+=450", ease: "power3.out"}, "thirteen")
+    .to("#TH-1", {duration: 0.0001, y:"+=450", ease: "power3.out"}, "thirteen")
+    .to("#THE_2-1", {duration: 0.0001, y:"+=450", ease: "power3.out"}, "thirteen")
+    .to("#B-1", {duration: 0.0001, y:"-=450", ease: "power3.out"}, "thirteen")
+    .to("#BE-1", {duration: 0.0001, y:"+=450", ease: "power3.out"}, "thirteen")
+    .to("#BEA-1", {duration: 0.0001, y:"-=450", ease: "power3.out"}, "thirteen")
+    .to("#BEAT-1", {duration: 0.0001, y:"-=450", ease: "power3.out"}, "thirteen")
+    .to("#BEATL-1", {duration: 0.0001, y:"+=450", ease: "power3.out"}, "thirteen")
+    .to("#BEATLE-1", {duration: 0.0001, y:"+=450", ease: "power3.out"}, "thirteen")
+    .to("#BEATLES_2-1", {duration: 0.0001, y:"+=450", ease: "power3.out"}, "thirteen")
+    .to("#logo", {duration:0.0001, alpha: 0}, "fourteen")
+    .to("#logo-1", {duration:0.0001, alpha: 1}, "fourteen")
+    // .to("#T-1", {duration: 2, ease: "power3.out", morphSVG:"#T-4"}, "fifteen")
+    // .to("#TH-1", {duration: 2, ease: "power3.out", morphSVG:"#TH-4"}, "fifteen")
+    // .to("#THE_2-1", {duration: 2, ease: "power3.out", morphSVG:"#THE-4"}, "fifteen")
+    // .to("#BEAT-1", {duration: 2, ease: "power3.out", morphSVG:"#T-4"}, "BEAT-4");
+
+    return tl;
+}
+
 mainTL.add(flash1())
 .add(mask())
 .add(split())
 .add(middle1())
 .add(others())
 .add(middle2())
-.add(flash2());
+.add(flash2())
+.add(morph());
 
 GSDevTools.create();

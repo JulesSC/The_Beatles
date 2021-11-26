@@ -466,3 +466,6 @@ textarea {
   width: 100%;
   height: 100%;
 }
+#preloader > div svg #logo-4 {
+  visibility: hidden;
+}
