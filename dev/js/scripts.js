@@ -130,7 +130,7 @@ function morph(){
     .to("#BEATLES_2-1", {duration: 0.0001, y:"+=450", ease: "power3.out"}, "thirteen")
     .to("#logo", {duration:0.0001, alpha: 0}, "fourteen")
     .to("#logo-1", {duration:0.0001, alpha: 1}, "fourteen")
-    .to("#logo-1", {duration:1, scaleX: 5, scaleY: 5, transformOrigin: "center bottom", ease: "power4.in", rotate: -115}, "fifteen")
+    .to("#logo-1", {duration:1, scaleX: 5, scaleY: 5, transformOrigin: "center bottom", ease: "power4.in", rotate: -75}, "fifteen")
     .to("#T-1", {duration: 1, ease: "power2.out", morphSVG:"#t-4", y:"-=250"}, "fifteen")
     .to("#TH-1", {duration: 1, ease: "power2.out", morphSVG:"#th-4", y:"-=250"}, "fifteen")
     .to("#THE_2-1", {duration: 1, ease: "power2.out", morphSVG:"#the-4", y:"-=250"}, "fifteen")
