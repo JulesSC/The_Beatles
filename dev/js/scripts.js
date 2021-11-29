@@ -145,6 +145,23 @@ function morph(){
     return tl;
 }
 
+function final(){
+    const tl = gsap.timeline();
+    tl.to("#logo-1", {duration:0.0001, alpha: 0, y:"-=450"}, "sixteen")
+    .to("#logo", {duration:0.0001, fill: "rgba(255, 255, 255, 1)", alpha: 1})
+    .from("#T", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
+    .from("#TH", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
+    .from("#THE_2", {duration: 0.5, y:"-=500", ease: "power3.out"}, "sixteen")
+    .from("#B", {duration: 0.5, y:"-=500", ease: "power3.out"}, "sixteen")
+    .from("#BE", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
+    .from("#BEA", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
+    .from("#BEAT", {duration: 0.5, y:"-=500", ease: "power3.out"}, "sixteen")
+    .from("#BEATL", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
+    .from("#BEATLE", {duration: 0.5, y:"-=500", ease: "power3.out"}, "sixteen")
+    .from("#BEATLES_2", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
+    return tl;
+}
+
 mainTL.add(flash1())
 .add(mask())
 .add(split())
@@ -152,6 +169,7 @@ mainTL.add(flash1())
 .add(others())
 .add(middle2())
 .add(flash2())
-.add(morph());
+.add(morph())
+.add(final());
 
 GSDevTools.create();
