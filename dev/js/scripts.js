@@ -130,10 +130,18 @@ function morph(){
     .to("#BEATLES_2-1", {duration: 0.0001, y:"+=450", ease: "power3.out"}, "thirteen")
     .to("#logo", {duration:0.0001, alpha: 0}, "fourteen")
     .to("#logo-1", {duration:0.0001, alpha: 1}, "fourteen")
-    // .to("#T-1", {duration: 2, ease: "power3.out", morphSVG:"#T-4"}, "fifteen")
-    // .to("#TH-1", {duration: 2, ease: "power3.out", morphSVG:"#TH-4"}, "fifteen")
-    // .to("#THE_2-1", {duration: 2, ease: "power3.out", morphSVG:"#THE-4"}, "fifteen")
-    // .to("#BEAT-1", {duration: 2, ease: "power3.out", morphSVG:"#T-4"}, "BEAT-4");
+    .to("#logo-1", {duration:1, scaleX: 5, scaleY: 5, transformOrigin: "center bottom", ease: "power4.in", rotate: -115}, "fifteen")
+    .to("#T-1", {duration: 1, ease: "power2.out", morphSVG:"#t-4", y:"-=250"}, "fifteen")
+    .to("#TH-1", {duration: 1, ease: "power2.out", morphSVG:"#th-4", y:"-=250"}, "fifteen")
+    .to("#THE_2-1", {duration: 1, ease: "power2.out", morphSVG:"#the-4", y:"-=250"}, "fifteen")
+    .to("#B-1", {duration: 1, ease: "power2.out", morphSVG:"#b-4", y:"-=250"}, "fifteen")
+    .to("#BE-1", {duration: 1, ease: "power2.out", morphSVG:"#be-4", y:"-=250"}, "fifteen")
+    .to("#BEA-1", {duration: 1, ease: "power2.out", morphSVG:"#bea-4", y:"-=250"}, "fifteen")
+    .to("#BEAT-1", {duration: 1, ease: "power2.out", morphSVG:"#beat-4", y:"-=250"}, "fifteen")
+    .to("#BEATL-1", {duration: 1, ease: "power2.out", morphSVG:"#beatl-4", y:"-=250"}, "fifteen")
+    .to("#BEATLE-1", {duration: 1, ease: "power2.out", morphSVG:"#beatle-4", y:"-=250"}, "fifteen")
+    .to("#BEATLES_2-1", {duration: 1, ease: "power2.out", morphSVG:"#beatles-4", y:"-=250"}, "fifteen")
+    .to("#background, #preloader", {duration: 0.5, fill: "rgba(0, 0, 0, 1)", backgroundColor: "rgba(0, 0, 0, 1)", ease: "power2.in"}, "-=0.5")
     return tl;
 }
 
