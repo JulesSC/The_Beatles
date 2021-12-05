@@ -64,11 +64,11 @@ function middle1(){
     // .to("#T, #B, #BE, #BEATLE, #BEATLES_2", {duration:0.0001, y:"-=550"}, "nine")
 
     // trying to bring letters into the clip path from above and below
-    // .from("#T", {duration: 0.5, y:"+=300", ease: "power3.out"}, "eight")
-    // .from("#B", {duration: 0.5, y:"-=500", ease: "power3.out"}, "eight")
-    // .from("#BE", {duration: 0.5, y:"+=300", ease: "power3.out"}, "eight")
-    // .from("#BEATLE", {duration: 0.5, y:"-=500", ease: "power3.out"}, "eight")
-    // .from("#BEATLES_2", {duration: 0.5, y:"+=300", ease: "power3.out"}, "eight")
+    .from("#T", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "eight")
+    .from("#B", {duration: 0.5, y:"-=500", ease: "power3.out", immediateRender: false}, "eight")
+    .from("#BE", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "eight")
+    .from("#BEATLE", {duration: 0.5, y:"-=500", ease: "power3.out", immediateRender: false}, "eight")
+    .from("#BEATLES_2", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "eight")
     return tl;
 }
 
@@ -95,11 +95,11 @@ function middle2(){
     tl.to("#TH, #THE_2, #BEA, #BEAT, #BEATL", {duration:0.0001, alpha: 1})
 
     // trying to bring letters into the clip path from above and below
-    // .from("#TH", {duration: 0.5, y:"+=300", ease: "power3.out"}, "ten")
-    // .from("#THE_2", {duration: 0.5, y:"-=500", ease: "power3.out"}, "ten")
-    // .from("#BEA", {duration: 0.5, y:"+=300", ease: "power3.out"}, "ten")
-    // .from("#BEAT", {duration: 0.5, y:"-=500", ease: "power3.out"}, "ten")
-    // .from("#BEATL", {duration: 0.5, y:"+=300", ease: "power3.out"}, "ten")
+    .from("#TH", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "ten")
+    .from("#THE_2", {duration: 0.5, y:"-=500", ease: "power3.out", immediateRender: false}, "ten")
+    .from("#BEA", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "ten")
+    .from("#BEAT", {duration: 0.5, y:"-=500", ease: "power3.out", immediateRender: false}, "ten")
+    .from("#BEATL", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "ten")
     return tl;
 }
 
@@ -147,27 +147,27 @@ function morph(){
 
 function final(){
     const tl = gsap.timeline();
-    tl.to("#logo-1", {duration:0.0001, alpha: 0, y:"-=450"}, "sixteen")
+    tl.to("#logo-1", {duration:0.0001, alpha: 0, delay: 0.5})
     .to("#logo", {duration:0.0001, fill: "rgba(255, 255, 255, 1)", alpha: 1})
-    .from("#T", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
-    .from("#TH", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
-    .from("#THE_2", {duration: 0.5, y:"-=500", ease: "power3.out"}, "sixteen")
-    .from("#B", {duration: 0.5, y:"-=500", ease: "power3.out"}, "sixteen")
-    .from("#BE", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
-    .from("#BEA", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
-    .from("#BEAT", {duration: 0.5, y:"-=500", ease: "power3.out"}, "sixteen")
-    .from("#BEATL", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
-    .from("#BEATLE", {duration: 0.5, y:"-=500", ease: "power3.out"}, "sixteen")
-    .from("#BEATLES_2", {duration: 0.5, y:"+=300", ease: "power3.out"}, "sixteen")
+    .from("#T", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "sixteen")
+    .from("#TH", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "sixteen")
+    .from("#THE_2", {duration: 0.5, y:"-=500", ease: "power3.out", immediateRender: false}, "sixteen")
+    .from("#B", {duration: 0.5, y:"-=500", ease: "power3.out", immediateRender: false}, "sixteen")
+    .from("#BE", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "sixteen")
+    .from("#BEA", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "sixteen")
+    .from("#BEAT", {duration: 0.5, y:"-=500", ease: "power3.out", immediateRender: false}, "sixteen")
+    .from("#BEATL", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "sixteen")
+    .from("#BEATLE", {duration: 0.5, y:"-=500", ease: "power3.out", immediateRender: false}, "sixteen")
+    .from("#BEATLES_2", {duration: 0.5, y:"+=300", ease: "power3.out", immediateRender: false}, "sixteen")
     return tl;
 }
 
 mainTL.add(flash1())
 .add(mask())
 .add(split())
-.add(middle1())
+.add(middle1(), "-=50%")
 .add(others())
-.add(middle2())
+.add(middle2(), "-=50%")
 .add(flash2())
 .add(morph())
 .add(final());
