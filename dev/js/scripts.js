@@ -10,10 +10,11 @@ const mainTL = gsap.timeline();
 function flash1(){
     const tl = gsap.timeline();
     tl.to("#logo-2, #logo-3", {duration:0.0001, alpha: 0})
-    .to("#background", {duration: 0.05, fill: "rgba(0, 0, 0, 1)", ease: "none", delay: .05}, "one")
-    .to("#preloader", {duration: 0.05, backgroundColor: "rgba(0, 0, 0, 1)", ease: "none", delay: .05}, "one")
-    .to("#logo-1", {duration: 0.05, fill: "rgba(255, 255, 255, 1)", delay: .1, ease: "none"}, "one")
-    .to("#logo-1", {duration: 0.0001, alpha: 0, ease: "none"})
+    .to("#logo-1", {duration: 0.0001, alpha:1})
+    .to("#background", {duration: 0.1, fill: "rgba(0, 0, 0, 1)", ease: "none", delay: .1}, "one")
+    .to("#preloader", {duration: 0.1, backgroundColor: "rgba(0, 0, 0, 1)", ease: "none", delay: .1}, "one")
+    .to("#logo-1", {duration: 0.1, fill: "rgba(255, 255, 255, 1)", delay: .1, ease: "none"}, "one")
+    .to("#logo-1", {duration: 0.0001, alpha: 0, ease: "none", delay: .1})
     .to("#background", {duration: 0.05, fill: "rgba(255, 255, 255, 1)", ease: "none", delay: .05}, "two")
     .to("#preloader", {duration: 0.05, backgroundColor: "rgba(255, 255, 255, 1)", ease: "none", delay: .05}, "two")
     .to("#background", {duration: 0.05, fill: "rgba(0, 0, 0, 1)", ease: "none"}, "three")
